@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@page-components/*": ["./page-components/*"]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+Global Execution Context - As soon as whole js program is run the execution context is created and it has 2 components memory and code.
+
+Call stack - it handles everything to manage this execution context creation, deletion and the contro. it maintains the order or execution of execution contexts.
+
+Hoisting - it is where variable and function declarations are moved to the top of their scope before code execution.
+
+Scope - where u can access specific variable and function in our code.
+
+Lexical enviroment - its a local memory alone with lexical enviroment of its parent.
+
+Temporal dead zone - It is the time since the (let or const) variable was hoisted and till it is initialized some value. If anyone tries to access those variables during that zone, Javascript will always throw a reference error (is not defined).
+
+Let and Const - they r maintain in seprate space(Block Scope) not attached to the global space.
+
+Block - it refers to a group of zero or more statements enclosed within curly braces {}.
+
+Closures - It is a combination of a function bundled together and its lexical environment (the scope in which it was declared). This means that an inner function, created within an outer function, retains access to the variables and parameters of that outer function, even after the outer function has completed its execution.
+
+Uses of Closures - Module Design Pattern, currying, Functions like once, memoize, setTimeouts, Itreators, Data hiding and encapsulation
+
+Data hiding - suppose we have variable x and we want to data privavy over it so other functions and other pieces of code cannot access this variable.
+
+Disadvantages of closures - Over consumption of memory, No garbage collected.
+
+Garbage collector - its like a program in the browser or js engine which frees up the unutilize memory.
+
+Anonymous function - A function without a name is called anonymous function.
+
+First class function - The Ability to use function as values as known as First Class Function. it can be passed as arguments to another function and can be returned from the function.
+
+Callback Function - callback function is a function that is passed as an argument to another function.
+
+Event Loop - it enables asynchronous programming by handling tasks efficiently. Since JavaScript is single-threaded, it uses the event loop to manage the execution of multiple tasks without blocking the main thread.
+
+Callback Queue (Task Queue/MacroTask Queue) - When an asynchronous operation handled by a Web API or Node.js API completes, its associated callback function is placed in the callback queue. This queue holds "macro tasks" like (setTimeout, setInterval, and I/O operations).
+
+Microtask Queue - This queue holds "micro tasks," primarily promises (.then(), .catch(), .finally()) and queueMicrotask(). Microtasks have higher priority than macrotasks.
+
+Higher Order Funcion - A function which takes another function as an arguments and return a function called Higher order function.
+
+
+
+
+
+setInterval - Runs a function repeatedly at every interval (in milliseconds).
+
+useEffect and useLayoutEffect in React are both used for handling side effects, but they differ in their timing. useEffect runs asynchronously after the browser has painted, 
+while useLayoutEffect runs synchronously before the browser paints. Use useEffect for most side effects, and useLayoutEffect when you need to measure or manipulate the DOM before the browser repaints, like calculating element dimensions. 
