@@ -38,11 +38,42 @@ Microtask Queue - This queue holds "micro tasks," primarily promises (.then(), .
 
 Higher Order Funcion - A function which takes another function as an arguments and return a function called Higher order function.
 
-
-
-
-
 setInterval - Runs a function repeatedly at every interval (in milliseconds).
 
 useEffect and useLayoutEffect in React are both used for handling side effects, but they differ in their timing. useEffect runs asynchronously after the browser has painted, 
 while useLayoutEffect runs synchronously before the browser paints. Use useEffect for most side effects, and useLayoutEffect when you need to measure or manipulate the DOM before the browser repaints, like calculating element dimensions. 
+
+Memory Leak - A memory leak happens when your app keeps memory it no longer needs, so memory usage keeps increasing over time instead of being freed.
+
+SSR vs CSR - CSR renders in the browser after JS loads, while SSR renders HTML on the server before sending it to the browser, improving SEO and first load performance.
+
+CRP (Critical Rendering Path) - CRP is the sequence of steps the browser follows to convert HTML, CSS, and JavaScript into pixels on the screen.
+Optimizing CRP focuses on reducing render-blocking resources to show UI faster.
+
+                                HTML loads
+                                    ↓
+                                CSS loads → CSSOM
+                                    ↓
+                                JS loads → React starts
+                                    ↓
+                                JSX → Virtual DOM
+                                    ↓
+                                Virtual DOM → Real DOM
+                                    ↓
+                                Browser layout + paint
+                                    ↓
+                                UI appears 🎉
+
+Webpack - Webpack is a module bundler that builds a dependency graph of your application and bundles JavaScript, CSS, and assets into optimized files.
+It makes modern code like JSX, SCSS, and ES6 browser-compatible.
+
+Redux - Redux is a predictable state management library that stores global application state in a single store.
+State updates happen through dispatched actions processed by reducers.
+
+Reducers - Reducers are pure functions that take the current state and an action and return a new state.
+They define how the application state changes in response to actions.
+
+viewport - The viewport meta tag tells the browser how to scale and size a webpage on different devices, especially mobile screens.
+
+Virtualization - Virtualization in React is a performance optimization technique where only the items visible on the screen are rendered, instead of rendering the entire list or grid at once.
+Even if a list has thousands of items, React renders just a small window of items and dynamically updates them as the user scrolls.
